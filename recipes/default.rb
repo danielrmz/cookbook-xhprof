@@ -15,8 +15,7 @@
 # limitations under the License.
 #
 
-require_recipe "php::source"
-require_recipe "hosts"
+require_recipe "php::source" 
 require_recipe "apache2"
 
 package "graphviz" do 
