@@ -35,7 +35,7 @@ bash "Build xhprof" do
 # Download and Compile xhprof
   tar -xvzf xhprof-#{node['xhprof']['version']}.tar.gz
   (cd #{node['xhprof']['unzipped_name']}/extension && phpize)
-  (cd #{node['xhprof']['unzipped_name']}/extension && ./configure --with-php-config=/usr/local/bin/php-config)
+  (cd #{node['xhprof']['unzipped_name']}/extension && ./configure)
   (cd #{node['xhprof']['unzipped_name']}/extension && make)
   (cd #{node['xhprof']['unzipped_name']}/extension && make install)
   (cd #{node['xhprof']['unzipped_name']}/extension && make test)
